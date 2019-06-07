@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_small" translatesAutoresizingMaskIntoConstraints="NO" id="XwR-o1-UbB">
+                                <rect key="frame" x="10" y="62" width="128" height="196.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-HX-P5m" userLabel="TextContainer">
+                                <rect key="frame" x="284" y="0.0" width="284" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iHt-Ez-oVJ">
+                                        <rect key="frame" x="0.0" y="10" width="284" height="107.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="150"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-c4-mov">
+                                        <rect key="frame" x="0.0" y="130.5" width="284" height="179.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="250"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="150"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.24543191251833998" green="0.19297281605330235" blue="0.76895621827411165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="iHt-Ez-oVJ" firstAttribute="centerX" secondItem="N49-HX-P5m" secondAttribute="centerX" id="L0y-Tb-uwJ"/>
+                                    <constraint firstItem="iHt-Ez-oVJ" firstAttribute="top" secondItem="N49-HX-P5m" secondAttribute="top" constant="10" id="Oyc-my-9hC"/>
+                                    <constraint firstItem="1aH-c4-mov" firstAttribute="centerX" secondItem="N49-HX-P5m" secondAttribute="centerX" id="eC6-ei-wgM"/>
+                                    <constraint firstAttribute="bottom" secondItem="1aH-c4-mov" secondAttribute="bottom" constant="10" id="eJ5-yb-Z7g"/>
+                                    <constraint firstItem="1aH-c4-mov" firstAttribute="width" secondItem="N49-HX-P5m" secondAttribute="width" id="qqv-Qf-XoO"/>
+                                    <constraint firstItem="iHt-Ez-oVJ" firstAttribute="width" secondItem="N49-HX-P5m" secondAttribute="width" id="soM-96-Krz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2K9-sz-ROc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="width" secondItem="N49-HX-P5m" secondAttribute="width" multiplier="2" id="2Uh-rx-OVq"/>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5Pl-rz-7Jc"/>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="7Cf-4m-nvJ"/>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="width" secondItem="N49-HX-P5m" secondAttribute="width" multiplier="0.45" id="Bfy-As-eUe"/>
+                            <constraint firstAttribute="trailing" secondItem="N49-HX-P5m" secondAttribute="trailing" id="J9k-bN-aix"/>
+                            <constraint firstItem="N49-HX-P5m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-152" id="LTd-FI-oGo">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ot9-BA-9R8"/>
+                            <constraint firstAttribute="bottom" secondItem="N49-HX-P5m" secondAttribute="bottom" id="UQD-0p-38q"/>
+                            <constraint firstItem="N49-HX-P5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WYa-06-sOM"/>
+                            <constraint firstItem="N49-HX-P5m" firstAttribute="top" secondItem="XwR-o1-UbB" secondAttribute="bottom" constant="20" id="eqR-X5-bpM"/>
+                            <constraint firstItem="XwR-o1-UbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yK9-z0-2RZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2K9-sz-ROc"/>
+                                <exclude reference="5Pl-rz-7Jc"/>
+                                <exclude reference="Bfy-As-eUe"/>
+                                <exclude reference="2Uh-rx-OVq"/>
+                                <exclude reference="LTd-FI-oGo"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="2K9-sz-ROc"/>
+                                <include reference="5Pl-rz-7Jc"/>
+                                <exclude reference="7Cf-4m-nvJ"/>
+                                <include reference="Bfy-As-eUe"/>
+                                <exclude reference="Ot9-BA-9R8"/>
+                                <exclude reference="yK9-z0-2RZ"/>
+                                <include reference="2Uh-rx-OVq"/>
+                                <include reference="LTd-FI-oGo"/>
+                                <exclude reference="WYa-06-sOM"/>
+                                <exclude reference="eqR-X5-bpM"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud_small" width="300" height="196.5"/>
+    </resources>
 </document>
